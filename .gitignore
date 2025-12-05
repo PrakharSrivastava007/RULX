@@ -1,0 +1,127 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ---------------------------
+# PYTHON / FASTAPI BACKEND
+# ---------------------------
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# PyInstaller
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+
+# Logs
+*.log
+log/
+logs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# SQLite database (optional)
+app.db
+
+# FastAPI auto-generated folders
+staticfiles/
+uploaded_files/
+
+# ---------------------------
+# MACHINE LEARNING ARTIFACTS
+# ---------------------------
+
+# Model files
+models/*.h5
+models/*.joblib
+models/*.pkl
+
+# Training outputs
+*.npz
+*.npy
+*.ckpt
+saved_models/
+checkpoints/
+
+# Large data
+data/raw/
+data/processed/
+
+# ---------------------------
+# NODE / REACT FRONTEND
+# ---------------------------
+
+# Dependencies
+frontend/dashboard/node_modules/
+
+# Build output
+frontend/dashboard/build/
+
+# React environment variables
+frontend/dashboard/.env
+frontend/dashboard/.env.local
+frontend/dashboard/.env.development
+frontend/dashboard/.env.production
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---------------------------
+# VSCODE EDITOR SETTINGS
+# ---------------------------
+
+.vscode/
+*.code-workspace
+
+# ---------------------------
+# SYSTEM / OS FILES
+# ---------------------------
+
+.DS_Store
+Thumbs.db
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
