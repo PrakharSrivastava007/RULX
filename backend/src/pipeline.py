@@ -3,9 +3,9 @@ import pandas as pd
 import numpy as np
 import json
 
-from load_cmapss import load_train
-from preprocess import clean, add_features, get_features, scale
-from windowing import create_sequences
+from backend.src.load_cmapss import load_train
+from backend.src.preprocess import clean, add_features, get_features, scale
+from backend.src.windowing import create_sequences
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
