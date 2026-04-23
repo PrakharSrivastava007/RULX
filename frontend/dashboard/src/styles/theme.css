@@ -1,0 +1,30 @@
+:root {
+  --bg-main: #f7f3ef;
+  --bg-card: #fffaf6;
+  --primary: #d6a77a;
+  --secondary: #e8cfc1;
+  --accent: #c97c5d;
+  --text-main: #3e3e3e;
+  --text-light: #7a7a7a;
+  --border: #f0e6dd;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #f7f3ef, #fdf8f5);
+  color: #3e3e3e;
+}
+
+.card {
+  background: #fffaf6;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid #f0e6dd;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
