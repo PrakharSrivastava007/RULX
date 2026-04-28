@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --bg-main: #f7f3ef;
   --bg-card: #fffaf6;
   --primary: #d6a77a;
@@ -7,24 +7,55 @@
   --text-main: #3e3e3e;
   --text-light: #7a7a7a;
   --border: #f0e6dd;
-}
+} */
+
+/* Premium Warm Pastel Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to right, #f7f3ef, #fdf8f5);
-  color: #3e3e3e;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f7f3ef, #f3e9e2);
+  color: #2f2f2f;
 }
 
+/* Glass Card */
 .card {
-  background: #fffaf6;
+  background: rgba(255, 250, 246, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
   padding: 20px;
-  border-radius: 18px;
   border: 1px solid #f0e6dd;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.01);
+}
+
+/* Button */
+.btn-primary {
+  background: linear-gradient(135deg, #d6a77a, #c97c5d);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(201,124,93,0.3);
+}
+
+/* Inputs */
+input {
+  border-radius: 10px;
+  border: 1px solid #e6d5c9;
+  padding: 8px;
+  background: #fff;
 }

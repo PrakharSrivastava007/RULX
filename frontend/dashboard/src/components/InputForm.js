@@ -34,7 +34,9 @@ const InputForm = ({ onSubmit }) => {
         </div>
       ))}
 
-      <button onClick={handleSubmit}>Predict</button>
+      <button className="btn-primary" onClick={handleSubmit}>
+        Predict
+        </button>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import InputForm from "../components/InputForm";
 import { predict } from "../services/api";
+import { motion } from "framer-motion";
 
 const Dashboard = () => {
   const [result, setResult] = useState(null);
@@ -43,42 +44,49 @@ const Dashboard = () => {
       {/* Result Section */}
       {result && (
         <>
-          <div style={{ marginTop: "30px", display: "flex", gap: "20px" }}>
-            
-            {/* RUL Card */}
-            <div className="card" style={{ flex: 1 }}>
-              <h3>RUL</h3>
-              <p style={{ fontSize: "28px" }}>{result.rul}</p>
-            </div>
+          <div style={{ display: "flex", gap: "20px", marginTop: "30px" }}>
+  
+      {[
+        { title: "RUL", value: result.rul },
+        { title: "Failure Risk", value: result.probability },
+        { title: "Days Left", value: result.days_to_failure },
+      ].map((item, i) => (
+    
+        <motion.div
+          key={i}
+          className="card"
+          style={{ flex: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: i * 0.2 }}
+        >
+          <h3>{item.title}</h3>
+          <p style={{ fontSize: "30px", fontWeight: "600" }}>
+            {item.value}
+          </p>
+        </motion.div>
+      ))}
 
-            {/* Probability */}
-            <div className="card" style={{ flex: 1 }}>
-              <h3>Failure Risk</h3>
-              <p style={{ fontSize: "28px" }}>{result.probability}</p>
-            </div>
+    </div>
 
-            {/* Days */}
-            <div className="card" style={{ flex: 1 }}>
-              <h3>Days Left</h3>
-              <p style={{ fontSize: "28px" }}>{result.days_to_failure}</p>
-            </div>
-          </div>
-
-          {/* Status Indicator */}
-          <div
-            style={{
-              marginTop: "20px",
-              padding: "15px",
-              borderRadius: "12px",
-              background: getColor(),
-              color: "white",
-              width: "200px",
-              textAlign: "center",
-              fontWeight: "bold"
-            }}
-          >
-            {getStatus()}
-          </div>
+              {/* Status Indicator */}
+              <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              style={{
+                marginTop: "25px",
+                padding: "15px",
+                borderRadius: "20px",
+                background: getColor(),
+                color: "white",
+                width: "220px",
+                textAlign: "center",
+                fontWeight: "600",
+                boxShadow: "0 6px 20px rgba(0,0,0,0.1)"
+      }}
+    >
+      {getStatus()}
+    </motion.div>
         </>
       )}
     </Layout>
